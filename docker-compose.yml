@@ -1,0 +1,11 @@
+# Frontend container
+webapp_instance:
+  build: webapp/
+  ports:
+    - "5000:5000"
+  links:
+    - database_instance:database_instance
+
+# Backend container
+database_instance:
+  build: database/

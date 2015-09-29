@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+
+  <body>
+    {% if app_data %}
+      <!-- List all setup projects -->
+      <ul class="projects-list">
+      {% for data in app_data %}
+        <li>
+          {{ data }}
+        </li>
+      {% endfor %}
+      </ul>
+    {% else %}
+      <h3>No data!</h3>
+    {% endif %}
+  </body>
